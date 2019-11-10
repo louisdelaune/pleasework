@@ -47,7 +47,7 @@ class Engine:
 
 class RequestEngine:
 
-    def __init__(self, endpoint, callback=None, engine=Engine.THREADED, concurrentConnections=50, requestsPerConnection=100, pipeline=False, maxQueueSize=10000, timeout=5, maxRetriesPerRequest=3, readCallback=None, readSize=1024, resumeSSL=True):
+    def __init__(self, endpoint, callback=None, engine=Engine.THREADED, concurrentConnections=100000, requestsPerConnection=100000, pipeline=True, maxQueueSize=10000, timeout=5, maxRetriesPerRequest=3, readCallback=None, readSize=1024, resumeSSL=True):
         concurrentConnections = int(concurrentConnections)
         requestsPerConnection = int(requestsPerConnection)
 

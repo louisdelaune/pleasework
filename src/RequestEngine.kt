@@ -130,7 +130,7 @@ abstract class RequestEngine: IExtensionStateListener {
         }
 
         if (!queued) {
-            if (state == 0 && requestQueue.size == 100) {
+            if (state == 0 && requestQueue.size == 100000) {
                 Utils.out("Looks like a non-streaming attack, unlimiting the queue")
                 requestQueue = LinkedBlockingQueue(requestQueue)
             }
